@@ -1,17 +1,9 @@
+// SPDX-License-Identifier: GPL-2.0-only
 /*
- * Copyright (c) 2016-2019, 2021, The Linux Foundation. All rights reserved.
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 and
- * only version 2 as published by the Free Software Foundation.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * Copyright (c) 2016-2019, The Linux Foundation. All rights reserved.
  */
 
-#include "msm-audio-lpass.dtsi"
+#include "msm-audio-lpass-sdm845.dtsi"
 
 &msm_audio_ion {
 	iommus = <&apps_smmu 0x1821 0x0>;
@@ -74,8 +66,8 @@
 				<&dai_sec_tdm_rx_0>, <&dai_sec_tdm_tx_0>,
 				<&dai_tert_tdm_rx_0>, <&dai_tert_tdm_tx_0>,
 				<&dai_quat_tdm_rx_0>, <&dai_quat_tdm_tx_0>,
-				<&dai_quat_tdm_rx_1>,
-				<&proxy_rx>, <&proxy_tx>;
+				<&dai_quat_tdm_rx_1>, <&proxy_rx>,
+				<&proxy_tx>;
 		asoc-cpu-names = "msm-dai-q6-hdmi.8",  "msm-dai-q6-dp.0",
 				"msm-dai-q6-mi2s.0", "msm-dai-q6-mi2s.1",
 				"msm-dai-q6-mi2s.2", "msm-dai-q6-mi2s.3",
@@ -98,8 +90,8 @@
 				"msm-dai-q6-tdm.36880", "msm-dai-q6-tdm.36881",
 				"msm-dai-q6-tdm.36896", "msm-dai-q6-tdm.36897",
 				"msm-dai-q6-tdm.36912", "msm-dai-q6-tdm.36913",
-				"msm-dai-q6-tdm.36914",
-				"msm-dai-q6-dev.8194", "msm-dai-q6-dev.8195";
+				"msm-dai-q6-tdm.36914", "msm-dai-q6-dev.8194",
+				"msm-dai-q6-dev.8195";
 	};
 };
 

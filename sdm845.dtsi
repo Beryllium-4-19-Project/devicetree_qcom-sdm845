@@ -1,13 +1,6 @@
-/* Copyright (c) 2016-2019, The Linux Foundation. All rights reserved.
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 and
- * only version 2 as published by the Free Software Foundation.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+// SPDX-License-Identifier: GPL-2.0-only
+/*
+ * Copyright (c) 2016-2019, The Linux Foundation. All rights reserved.
  */
 
 #include "skeleton64.dtsi"
@@ -465,22 +458,10 @@
 				compatible = "android,vbmeta";
 				parts = "vbmeta,boot,system,vendor,dtbo";
 			};
-
-			fstab {
-				compatible = "android,fstab";
-				vendor {
-					compatible = "android,vendor";
-					dev = "/dev/block/platform/soc/1d84000.ufshc/by-name/vendor";
-					type = "ext4";
-					mnt_flags = "ro,barrier=1,discard";
-					fsmgr_flags = "wait,slotselect,avb";
-					status = "ok";
-				};
-			};
 		};
 	};
 
-	reserved-memory {
+	reserved_mem: reserved-memory {
 		#address-cells = <2>;
 		#size-cells = <2>;
 		ranges;
@@ -2637,7 +2618,7 @@
 		qcom,pipe-attr-ee;
 	};
 
-	qcom,qbt1000 {
+	qcom_qbt1000: qcom,qbt1000 {
 		compatible = "qcom,qbt1000";
 		clock-names = "core", "iface";
 		clock-frequency = <25000000>;
@@ -3283,12 +3264,6 @@
 					hysteresis = <1000>;
 					type = "passive";
 				};
-
-				thermal-hal-cfg {
-					temperature = <115000>;
-					hysteresis = <5000>;
-					type = "passive";
-				};
 			};
 		};
 
@@ -3302,12 +3277,6 @@
 				active-config0 {
 					temperature = <125000>;
 					hysteresis = <1000>;
-					type = "passive";
-				};
-
-				thermal-hal-cfg {
-					temperature = <115000>;
-					hysteresis = <5000>;
 					type = "passive";
 				};
 			};
@@ -3325,12 +3294,6 @@
 					hysteresis = <1000>;
 					type = "passive";
 				};
-
-				thermal-hal-cfg {
-					temperature = <115000>;
-					hysteresis = <5000>;
-					type = "passive";
-				};
 			};
 		};
 
@@ -3344,12 +3307,6 @@
 				active-config0 {
 					temperature = <125000>;
 					hysteresis = <1000>;
-					type = "passive";
-				};
-
-				thermal-hal-cfg {
-					temperature = <115000>;
-					hysteresis = <5000>;
 					type = "passive";
 				};
 			};
@@ -3397,12 +3354,6 @@
 					hysteresis = <1000>;
 					type = "passive";
 				};
-
-				thermal-hal-cfg {
-					temperature = <115000>;
-					hysteresis = <5000>;
-					type = "passive";
-				};
 			};
 		};
 
@@ -3416,12 +3367,6 @@
 				active-config0 {
 					temperature = <125000>;
 					hysteresis = <1000>;
-					type = "passive";
-				};
-
-				thermal-hal-cfg {
-					temperature = <115000>;
-					hysteresis = <5000>;
 					type = "passive";
 				};
 			};
@@ -3439,12 +3384,6 @@
 					hysteresis = <1000>;
 					type = "passive";
 				};
-
-				thermal-hal-cfg {
-					temperature = <115000>;
-					hysteresis = <5000>;
-					type = "passive";
-				};
 			};
 		};
 
@@ -3458,12 +3397,6 @@
 				active-config0 {
 					temperature = <125000>;
 					hysteresis = <1000>;
-					type = "passive";
-				};
-
-				thermal-hal-cfg {
-					temperature = <115000>;
-					hysteresis = <5000>;
 					type = "passive";
 				};
 			};
@@ -3481,12 +3414,6 @@
 					hysteresis = <1000>;
 					type = "passive";
 				};
-
-				thermal-hal-cfg {
-					temperature = <115000>;
-					hysteresis = <5000>;
-					type = "passive";
-				};
 			};
 		};
 
@@ -3500,12 +3427,6 @@
 				active-config0 {
 					temperature = <125000>;
 					hysteresis = <1000>;
-					type = "passive";
-				};
-
-				thermal-hal-cfg {
-					temperature = <115000>;
-					hysteresis = <5000>;
 					type = "passive";
 				};
 			};
